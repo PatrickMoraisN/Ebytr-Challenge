@@ -1,9 +1,13 @@
-import express, { Request, Response } from 'express';
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
+import express from 'express';
+import { mongoConnect } from './database/mongodb';
+import mainRoutes from './routes';
+
+mongoConnect();
 
 const server = express();
 
-server.get('/', (_req: Request, res: Response) => {
-  res.send('Ola mundo!');
-});
+server.use('/task', mainRoutes);
 
 server.listen(3000);
