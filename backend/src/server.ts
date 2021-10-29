@@ -8,7 +8,7 @@ mongoConnect();
 
 const server = express();
 
-server.use('/task', mainRoutes);
+server.use('/api/task', mainRoutes);
 
 server.listen(process.env.PORT, () => {
   console.log('Servidor online!');
