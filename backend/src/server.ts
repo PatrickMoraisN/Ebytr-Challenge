@@ -10,4 +10,6 @@ const server = express();
 
 server.use('/task', mainRoutes);
 
-server.listen(3000);
+server.listen(process.env.PORT, () => {
+  console.log('Servidor online!');
+});
