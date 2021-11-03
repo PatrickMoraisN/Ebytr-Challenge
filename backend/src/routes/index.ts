@@ -15,11 +15,11 @@ router.get('/:id', (req: Request, res: Response) => {
 });
 
 router.put('/edit', (req: Request, res: Response) => {
-  const { id } = req.params;
+  const { id } = req.body;
 });
 
 router.delete('/delete', (req: Request, res: Response) => {
-  const { id } = req.params;
+  const { id } = req.body;
 });
 
 export default router;
