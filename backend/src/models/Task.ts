@@ -4,14 +4,14 @@ type TaskProps = {
   title: string;
   description: string;
   status: string;
-  date: DateConstructor;
+  date: string;
 };
 
 const schema = new Schema<TaskProps>({
   title: { type: String, required: true },
   description: { type: String, required: true },
   status: { type: String, required: true },
-  date: { type: Date, required: true },
+  date: { type: String, required: true },
 });
 
 const modelName = 'Task';

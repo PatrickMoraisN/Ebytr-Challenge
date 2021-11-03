@@ -1,25 +1,26 @@
 import { Router, Request, Response } from 'express';
+import {
+  deleteTask,
+  editTask,
+  getAllTasks,
+  getTaskById,
+  createTask,
+} from '../controllers/taskController';
 
 const router = Router();
 
-router.get('/', (_req: Request, res: Response) => {
-  res.send('ola mundo');
-});
+router.get('/', (_request: Request, response: Response) =>
+  response.status(201).json({ ok: true })
+);
 
-router.get('/all', (_req: Request, res: Response) => {
-  res.send('ola mundo');
-});
+router.get('/all', getAllTasks);
 
-router.get('/:id', (req: Request, res: Response) => {
-  const { id } = req.params;
-});
+router.post('/create', createTask);
 
-router.put('/edit', (req: Request, res: Response) => {
-  const { id } = req.body;
-});
+router.put('/edit', editTask);
 
-router.delete('/delete', (req: Request, res: Response) => {
-  const { id } = req.body;
-});
+router.delete('/delete', deleteTask);
+
+router.get('/:id', getTaskById);
 
 export default router;
