@@ -31,8 +31,8 @@ function Home() {
       <Menu />
       <S.TasksContainer>
         {tasks.map((task: TaskProps) => {
-          const { _id, title, status } = task;
-          return <Task id={_id} title={title} status={status} />;
+          const { _id, title, status, date } = task;
+          return <Task id={_id} title={title} status={status} date={date} />;
         })}
       </S.TasksContainer>
       <S.Section>Home</S.Section>

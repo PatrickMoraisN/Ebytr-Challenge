@@ -9,9 +9,10 @@ type TaskProps = {
   title: string;
   status: string;
   id: string;
+  date: string;
 };
 
-function Task({ title, status, id }: TaskProps) {
+function Task({ title, status, id, date }: TaskProps) {
   const [isDeleteModalOpen, setIsDeleteModalOpen] = React.useState(false);
 
   const handleOpenDeleteModal = () => {
@@ -41,6 +42,7 @@ function Task({ title, status, id }: TaskProps) {
         <S.TextTask>{title}</S.TextTask>
       </Link>
       <S.Status className={handleClassStatus(status)}>{status}</S.Status>
+      <S.Date>({date})</S.Date>
       <S.ButtonsContainer>
         <S.EditButton type="button">
           <S.TextButton>Edit</S.TextButton>

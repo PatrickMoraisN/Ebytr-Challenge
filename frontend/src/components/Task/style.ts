@@ -94,3 +94,7 @@ export const DeleteButton = styled.button`
 export const Status = styled.span`
   margin-right: 5rem;
 `;
+
+export const Date = styled.span`
+  margin-right: 4rem;
+`;
