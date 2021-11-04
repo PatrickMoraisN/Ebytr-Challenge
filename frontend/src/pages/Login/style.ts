@@ -60,6 +60,17 @@ export const RightContainer = styled.div`
     transform: translateX(-20%);
     font-size: 8rem;
     color: var(--purple);
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1rem;
+      left: 0;
+      right: 0;
+      height: 4px;
+      border-radius: 5px;
+      background: var(--purple);
+    }
   }
 
   a {
