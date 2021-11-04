@@ -27,5 +27,6 @@ module.exports = {
     'no-use-before-define': 0,
     'import/no-extraneous-dependencies': 0,
     'import/prefer-default-export': 0,
+    'no-underscore-dangle': 0,
   },
 };
