@@ -11,7 +11,7 @@ function Menu() {
   return (
     <S.Aside>
       <S.Heading>Ebytr</S.Heading>
-      <Link to="/create">
+      <Link to="/create" className={currentRoute === '/create' ? 'active' : ''}>
         <IoMdAddCircle />
         Add Task
       </Link>
