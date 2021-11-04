@@ -22,12 +22,25 @@ function Task({ title, status, id }: TaskProps) {
     setIsDeleteModalOpen(false);
   };
 
+  const handleClassStatus = (param: string) => {
+    switch (param) {
+      case 'done':
+        return 'done';
+      case 'progress':
+        return 'progress';
+      case 'pending':
+        return 'pending';
+      default:
+        return '';
+    }
+  };
+
   return (
     <S.OneTaskContainer>
       <Link to={`/edit/${id}`}>
         <S.TextTask>{title}</S.TextTask>
       </Link>
-      <S.Status>{status}</S.Status>
+      <S.Status className={handleClassStatus(status)}>{status}</S.Status>
       <S.ButtonsContainer>
         <S.EditButton type="button">
           <S.TextButton>Edit</S.TextButton>

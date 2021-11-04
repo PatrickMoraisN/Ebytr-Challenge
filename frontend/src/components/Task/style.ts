@@ -26,6 +26,23 @@ export const OneTaskContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  .done {
+    background: #96ff9f;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+  }
+
+  .pending {
+    background: #e9fa87;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+  }
+
+  .progress {
+    background: #8f9eff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+  }
 `;
 
 export const TextTask = styled.p`

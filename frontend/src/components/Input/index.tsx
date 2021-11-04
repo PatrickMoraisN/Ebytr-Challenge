@@ -17,6 +17,7 @@ function Input({ placeholder, setValue, inputValue }: InputProps) {
         placeholder={placeholder}
         onChange={({ target }: EventChange) => setValue(target.value)}
         value={inputValue}
+        required
       />
     </>
   );
