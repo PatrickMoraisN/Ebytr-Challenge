@@ -35,7 +35,7 @@ function Home() {
           return <Task id={_id} title={title} status={status} date={date} />;
         })}
       </S.TasksContainer>
-      <S.Section>Home</S.Section>
+      <S.Section />
     </div>
   );
 }

@@ -53,7 +53,7 @@ export const ButtonsContainer = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: 6rem;
+  bottom: 13rem;
 
   button:first-child {
     background: #d6d6d6;
