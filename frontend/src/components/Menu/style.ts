@@ -18,4 +18,15 @@ export const Aside = styled.aside`
     left: 19rem;
     position: absolute;
   }
+
+  a {
+    font-size: 1.6rem;
+    color: var(--text-title);
+    text-decoration: none;
+    font-weight: 400;
+  }
+
+  .active {
+    color: var(--purple);
+  }
 `;
