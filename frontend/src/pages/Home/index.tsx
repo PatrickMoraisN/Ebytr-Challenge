@@ -1,10 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaEdit } from 'react-icons/fa';
-import { AiFillDelete } from 'react-icons/ai';
 import { api } from '../../services/api';
 import Menu from '../../components/Menu';
 import * as S from './style';
+import Task from '../../components/Task';
 
 type TaskProps = {
   _id: string;
@@ -33,24 +31,8 @@ function Home() {
       <Menu />
       <S.TasksContainer>
         {tasks.map((task: TaskProps) => {
-          const { _id } = task;
-          return (
-            <S.OneTaskContainer>
-              <Link to={`/edit/${_id}`}>
-                <S.TextTask>{task.title}</S.TextTask>
-              </Link>
-              <S.ButtonsContainer>
-                <S.EditButton type="button">
-                  <S.TextButton>Edit</S.TextButton>
-                  <FaEdit />
-                </S.EditButton>
-                <S.DeleteButton type="button">
-                  <S.TextButton>Delete</S.TextButton>
-                  <AiFillDelete />
-                </S.DeleteButton>
-              </S.ButtonsContainer>
-            </S.OneTaskContainer>
-          );
+          const { _id, title, status } = task;
+          return <Task id={_id} title={title} status={status} />;
         })}
       </S.TasksContainer>
       <S.Section>Home</S.Section>

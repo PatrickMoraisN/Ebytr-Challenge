@@ -1,40 +1,5 @@
 import styled from 'styled-components';
 
-export const Section = styled.section`
-  margin-left: 19rem;
-`;
-
-export const TasksContainer = styled.div`
-  left: 28rem;
-  top: 10rem;
-  position: absolute;
-
-  a:first-child {
-    display: block;
-    width: 30rem;
-    height: 6rem;
-    color: var(--title-text);
-    text-decoration: none;
-    display: flex;
-    gap: 5rem;
-    justify-content: space-around;
-    align-items: center;
-  }
-`;
-
-export const OneTaskContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
-export const TextTask = styled.p`
-  font-size: 3rem;
-  display: block;
-  & + p {
-    margin-top: 5rem;
-  }
-`;
-
 export const EditButton = styled.button`
   padding: 0.5rem 1rem;
   width: 8rem;
@@ -53,6 +18,21 @@ export const EditButton = styled.button`
   svg {
     margin-left: 15px;
     font-size: 1.6rem;
+  }
+`;
+
+export const OneTaskContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+export const TextTask = styled.p`
+  font-size: 3rem;
+  width: 100%;
+  display: block;
+  & + p {
+    margin-top: 5rem;
   }
 `;
 
@@ -86,4 +66,8 @@ export const DeleteButton = styled.button`
     margin-left: 8px;
     font-size: 1.6rem;
   }
+`;
+
+export const Status = styled.span`
+  margin-right: 5rem;
 `;
