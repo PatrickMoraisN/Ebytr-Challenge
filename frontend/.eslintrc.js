@@ -26,5 +26,6 @@ module.exports = {
     'import/no-unresolved': 0,
     'no-use-before-define': 0,
     'import/no-extraneous-dependencies': 0,
+    'import/prefer-default-export': 0,
   },
 };

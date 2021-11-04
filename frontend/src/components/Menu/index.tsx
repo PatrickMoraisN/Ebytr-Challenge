@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import * as S from './style';
 
 function Menu() {
   return (
-    <div>
+    <S.Aside>
       <Link to="/home">Home</Link>
       <Link to="/">Login</Link>
-    </div>
+    </S.Aside>
   );
 }
 
