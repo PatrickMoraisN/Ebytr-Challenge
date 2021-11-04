@@ -1,12 +1,13 @@
 import React from 'react';
 import Input from '../../components/Input';
 import Menu from '../../components/Menu';
+import RadioBox from '../../components/RadioBox';
 import * as S from './style';
 
 function CreateTask() {
   const [title, setTitle] = React.useState<string>('');
   const [description, setDescription] = React.useState<string>('');
-  // const [status, setStatus] = React.useState('');
+  const [status, setStatus] = React.useState('');
   return (
     <>
       <Menu />
@@ -24,6 +25,9 @@ function CreateTask() {
               setValue={setDescription}
               inputValue={description}
             />
+            <S.RadioBoxContainer>
+              <RadioBox type={status} setType={setStatus} />
+            </S.RadioBoxContainer>
           </S.InputsContainer>
           <S.ButtonsContainer>
             <button type="button">Cancel</button>

@@ -81,3 +81,11 @@ export const ButtonsContainer = styled.div`
     filter: brightness(0.8);
   }
 `;
+
+export const RadioBoxContainer = styled.div`
+  display: flex;
+  position: absolute;
+  bottom: -10rem;
+  width: 100%;
+  justify-content: space-between;
+`;
