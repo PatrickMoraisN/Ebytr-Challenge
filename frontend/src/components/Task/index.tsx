@@ -41,6 +41,7 @@ function Task({ title, status, id }: TaskProps) {
       <DeleteModal
         isOpen={isDeleteModalOpen}
         onRequestClose={handleCloseDeleteModal}
+        id={id}
       />
     </S.OneTaskContainer>
   );
