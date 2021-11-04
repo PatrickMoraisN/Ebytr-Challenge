@@ -1,13 +1,15 @@
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from './routes';
 import { CreateGlobalStyle } from './styles/global'
 
 function App() {
   return (
-    <div className="App">
-      <button type="button" className="testezin" disabled={false}>
-        Esse eh um botao simpatico
-      </button>
+    <>
+      <Router>
+        <Routes />
+      </Router>
       <CreateGlobalStyle />
-    </div>
+    </>
   );
 }
 
