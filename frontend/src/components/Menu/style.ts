@@ -32,6 +32,6 @@ export const Aside = styled.aside`
 `;
 
 export const Heading = styled.h2`
-  font-size: 2rem;
-  color: #a87ffa;
+  font-size: 3rem;
+  color: var(--text-title);
 `;
