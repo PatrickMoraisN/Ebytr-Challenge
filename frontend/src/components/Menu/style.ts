@@ -24,6 +24,10 @@ export const Aside = styled.aside`
     color: var(--text-title);
     text-decoration: none;
     font-weight: 400;
+
+    svg {
+      margin-right: 10px;
+    }
   }
 
   .active {
