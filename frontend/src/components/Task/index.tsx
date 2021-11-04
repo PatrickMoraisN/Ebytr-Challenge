@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaEdit } from 'react-icons/fa';
 import { AiFillDelete } from 'react-icons/ai';
 import * as S from './style';
+import DeleteModal from '../DeleteModal';
 
 type TaskProps = {
   title: string;
@@ -11,6 +12,16 @@ type TaskProps = {
 };
 
 function Task({ title, status, id }: TaskProps) {
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = React.useState(false);
+
+  const handleOpenDeleteModal = () => {
+    setIsDeleteModalOpen(true);
+  };
+
+  const handleCloseDeleteModal = () => {
+    setIsDeleteModalOpen(false);
+  };
+
   return (
     <S.OneTaskContainer>
       <Link to={`/edit/${id}`}>
@@ -22,11 +33,15 @@ function Task({ title, status, id }: TaskProps) {
           <S.TextButton>Edit</S.TextButton>
           <FaEdit />
         </S.EditButton>
-        <S.DeleteButton type="button">
+        <S.DeleteButton type="button" onClick={handleOpenDeleteModal}>
           <S.TextButton>Delete</S.TextButton>
           <AiFillDelete />
         </S.DeleteButton>
       </S.ButtonsContainer>
+      <DeleteModal
+        isOpen={isDeleteModalOpen}
+        onRequestClose={handleCloseDeleteModal}
+      />
     </S.OneTaskContainer>
   );
 }
