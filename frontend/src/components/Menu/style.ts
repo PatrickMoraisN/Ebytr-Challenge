@@ -30,3 +30,8 @@ export const Aside = styled.aside`
     color: var(--purple);
   }
 `;
+
+export const Heading = styled.h2`
+  font-size: 2rem;
+  color: #a87ffa;
+`;

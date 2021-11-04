@@ -7,6 +7,7 @@ function Menu() {
 
   return (
     <S.Aside>
+      <S.Heading>Ebytr</S.Heading>
       <Link to="/home" className={currentRoute === '/home' ? 'active' : ''}>
         Home
       </Link>
