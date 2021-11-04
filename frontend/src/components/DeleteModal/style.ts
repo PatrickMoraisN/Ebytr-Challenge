@@ -29,6 +29,7 @@ export const DeleteButton = styled.button`
   background: #fa4848;
   transition: 0.3s;
   cursor: pointer;
+  color: white;
 
   &:hover {
     filter: brightness(0.8);

@@ -11,6 +11,7 @@ export const EditButton = styled.button`
   cursor: pointer;
   transition: 0.3s;
   margin-right: 15px;
+  color: white;
 
   &:hover {
     filter: brightness(0.8);
@@ -31,15 +32,19 @@ export const TextTask = styled.p`
   font-size: 3rem;
   width: 100%;
   display: block;
+  transition: 0.3s;
   & + p {
     margin-top: 5rem;
+  }
+  &:hover {
+    color: var(--purple);
   }
 `;
 
 export const TextButton = styled.p`
   font-size: 1.5rem;
   padding-right: 8px;
-  border-right: 2px solid var(--text-title);
+  border-right: 2px solid white;
 `;
 
 export const ButtonsContainer = styled.div`
@@ -57,6 +62,7 @@ export const DeleteButton = styled.button`
   cursor: pointer;
   transition: 0.3s;
   margin-right: 15px;
+  color: white;
 
   &:hover {
     filter: brightness(0.8);

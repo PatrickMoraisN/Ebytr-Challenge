@@ -24,6 +24,30 @@ export const Aside = styled.aside`
     color: var(--text-title);
     text-decoration: none;
     font-weight: 400;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      height: 3px;
+      background: red;
+      width: 0;
+      transition: 0.2s;
+    }
+
+    &:hover::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--purple);
+      border-radius: 6px;
+    }
 
     svg {
       margin-right: 10px;

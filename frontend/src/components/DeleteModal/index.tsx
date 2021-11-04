@@ -1,7 +1,7 @@
-import axios from 'axios';
 import React from 'react';
 import Modal from 'react-modal';
 import { useHistory } from 'react-router-dom';
+import { api } from '../../services/api';
 import * as S from './style';
 
 type DeleteModalProps = {
@@ -13,7 +13,7 @@ type DeleteModalProps = {
 function DeleteModal({ isOpen, onRequestClose, id }: DeleteModalProps) {
   const history = useHistory();
   const handleDeleteTask = async () => {
-    await axios.delete('http://localhost:3232/api/task/delete', {
+    await api.delete('/delete', {
       data: { id },
     });
     history.push('/home');
