@@ -1,18 +1,17 @@
-import { Route, Switch } from 'react-router-dom';
-import { BrowserRouter as Routes } from 'react-router-dom';
+import { Route, Switch, BrowserRouter as Routes } from 'react-router-dom';
 
-import Login from '../components/Login';
-import Edit from '../components/Edit';
-import Home from '../components/Home';
+import Login from '../pages/Login';
+import Edit from '../pages/Edit';
+import Home from '../pages/Home';
 
 const RoutesComponent = () => (
-  <Switch>
-    <Routes>
+  <Routes>
+    <Switch>
       <Route exact path="/" component={Login} />
       <Route exact path="/home" component={Home} />
       <Route exact path="/edit/:id" component={Edit} />
-    </Routes>
-  </Switch>
+    </Switch>
+  </Routes>
 );
 
 export default RoutesComponent;
