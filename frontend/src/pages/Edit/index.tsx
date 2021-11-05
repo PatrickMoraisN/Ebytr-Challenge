@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
+import { toast } from 'react-toastify';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import Input from '../../components/Input';
@@ -16,8 +17,11 @@ function Edit() {
   const [description, setDescription] = React.useState('');
   const [status, setStatus] = React.useState('');
   const { tasks } = useSelector((state: RootState) => state.TaskReducer);
+
   const filteredTask = tasks.find(({ _id }: any) => _id === id);
+
   const history = useHistory();
+
   React.useEffect(() => {
     setTitle(filteredTask.title);
     setDescription(filteredTask.description);
@@ -30,18 +34,41 @@ function Edit() {
     return formatedDate;
   };
 
+  const isAValidEdit = () => {
+    if (
+      title === filteredTask.title &&
+      description === filteredTask.description &&
+      status === filteredTask.status
+    ) {
+      toast.error('Invalid Task! Change something!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'dark',
+      });
+      return false;
+    }
+    return true;
+  };
+
   const handleEditTask = async () => {
-    const unformatedDate = moment().format('l');
-    const date = formatDatePT_BR(unformatedDate);
-    await api.put('/edit', {
-      id,
-      title,
-      description,
-      status,
-      date,
-    });
-    history.push('/home');
-    window.location.reload();
+    if (isAValidEdit()) {
+      const unformatedDate = moment().format('l');
+      const date = formatDatePT_BR(unformatedDate);
+      await api.put('/edit', {
+        id,
+        title,
+        description,
+        status,
+        date,
+      });
+      history.push('/home');
+      window.location.reload();
+    }
   };
 
   return (

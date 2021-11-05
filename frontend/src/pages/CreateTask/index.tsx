@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import { useHistory } from 'react-router';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import Input from '../../components/Input';
 import Menu from '../../components/Menu';
 import RadioBox from '../../components/RadioBox';
