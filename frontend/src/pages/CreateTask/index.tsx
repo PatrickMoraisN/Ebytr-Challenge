@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import { useHistory } from 'react-router';
-import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
 import Input from '../../components/Input';
 import Menu from '../../components/Menu';
 import RadioBox from '../../components/RadioBox';
@@ -24,6 +24,18 @@ function CreateTask() {
   const handleAddTask = async () => {
     const unformatedDate = moment().format('l');
     const date = formatDatePT_BR(unformatedDate);
+    if (!title || !description) {
+      toast.error('Invalid Task!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'dark',
+      });
+    }
     await api.post('/create', { title, description, status, date });
     history.push('/home');
     window.location.reload();

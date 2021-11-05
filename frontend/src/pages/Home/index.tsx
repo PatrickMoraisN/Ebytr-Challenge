@@ -5,6 +5,7 @@ import Menu from '../../components/Menu';
 import * as S from './style';
 import Task from '../../components/Task';
 import Search from '../../components/Search';
+import { ADD_TASKS_ACTION } from '../../redux/actions';
 
 type TaskProps = {
   _id: string;
@@ -21,10 +22,10 @@ function Home() {
   async function getAllTasks(): Promise<void> {
     const { data } = await api.get('/all');
     dispatch({
-      type: 'ADD_TASKS',
+      type: ADD_TASKS_ACTION,
       payload: { tasks: data },
     });
-    setTasks(data.allTasks);
+    setTasks(data.allTasks.reverse());
   }
 
   React.useEffect(() => {
