@@ -70,6 +70,7 @@ function Edit() {
     <>
       <Menu />
       <S.Section>
+        <S.EditHeading>Edit your task!</S.EditHeading>
         <S.InputContainer>
           <Input
             placeholder="Add a Title"

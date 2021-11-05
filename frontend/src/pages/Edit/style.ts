@@ -76,3 +76,8 @@ export const ButtonsContainer = styled.div`
     filter: brightness(0.8);
   }
 `;
+
+export const EditHeading = styled.h2`
+  font-size: 3rem;
+  margin-top: 6rem;
+`;
