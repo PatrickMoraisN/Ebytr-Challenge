@@ -8,18 +8,13 @@ import Menu from '../../components/Menu';
 import RadioBox from '../../components/RadioBox';
 import { api } from '../../services/api';
 import * as S from './style';
+import { formatDatePT_BR } from '../../utils';
 
 function CreateTask() {
   const [title, setTitle] = React.useState<string>('');
   const [description, setDescription] = React.useState<string>('');
   const [status, setStatus] = React.useState<string>('done');
   const history = useHistory();
-
-  const formatDatePT_BR = (date: string) => {
-    const dateArray = date.split('/');
-    const formatedDate = `${dateArray[1]}/${dateArray[0]}/${dateArray[2]}`;
-    return formatedDate;
-  };
 
   const handleAddTask = async () => {
     const unformatedDate = moment().format('l');

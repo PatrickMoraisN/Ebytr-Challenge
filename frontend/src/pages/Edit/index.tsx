@@ -10,6 +10,7 @@ import RadioBox from '../../components/RadioBox';
 import { RootState } from '../../redux/reducers';
 import { api } from '../../services/api';
 import * as S from './style';
+import { formatDatePT_BR } from '../../utils';
 
 function Edit() {
   const [id] = React.useState(useHistory().location.pathname.split('/')[2]);
@@ -27,12 +28,6 @@ function Edit() {
     setDescription(filteredTask.description);
     setStatus(filteredTask.status);
   }, []);
-
-  const formatDatePT_BR = (date: string) => {
-    const dateArray = date.split('/');
-    const formatedDate = `${dateArray[1]}/${dateArray[0]}/${dateArray[2]}`;
-    return formatedDate;
-  };
 
   const isAValidEdit = () => {
     if (
