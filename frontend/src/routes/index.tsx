@@ -5,6 +5,7 @@ import Edit from '../pages/Edit';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import CreateTask from '../pages/CreateTask';
+import Task from '../pages/Task';
 
 const RoutesComponent = () => (
   <Routes>
@@ -14,6 +15,7 @@ const RoutesComponent = () => (
       <Route exact path="/about" component={About} />
       <Route exact path="/create" component={CreateTask} />
       <Route exact path="/edit/:id" component={Edit} />
+      <Route exact path="/task/:id" component={Task} />
     </Switch>
   </Routes>
 );

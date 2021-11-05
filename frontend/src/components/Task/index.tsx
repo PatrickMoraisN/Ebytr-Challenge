@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaEdit } from 'react-icons/fa';
 import { AiFillDelete } from 'react-icons/ai';
+import { useHistory } from 'react-router';
 import * as S from './style';
 import DeleteModal from '../DeleteModal';
 
@@ -14,6 +15,7 @@ type TaskProps = {
 
 function Task({ title, status, id, date }: TaskProps) {
   const [isDeleteModalOpen, setIsDeleteModalOpen] = React.useState(false);
+  const history = useHistory();
 
   const handleOpenDeleteModal = () => {
     setIsDeleteModalOpen(true);
@@ -36,15 +38,19 @@ function Task({ title, status, id, date }: TaskProps) {
     }
   };
 
+  const handleEditTask = () => {
+    history.push(`/edit/${id}`);
+  };
+
   return (
     <S.OneTaskContainer>
-      <Link to={`/edit/${id}`}>
+      <Link to={`/task/${id}`}>
         <S.TextTask>{title}</S.TextTask>
       </Link>
       <S.Status className={handleClassStatus(status)}>{status}</S.Status>
       <S.Date>({date})</S.Date>
       <S.ButtonsContainer>
-        <S.EditButton type="button">
+        <S.EditButton type="button" onClick={handleEditTask}>
           <S.TextButton>Edit</S.TextButton>
           <FaEdit />
         </S.EditButton>
