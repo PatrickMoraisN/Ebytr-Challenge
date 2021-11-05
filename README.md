@@ -56,6 +56,7 @@ The aim is to make a full-stack application with the basic features of a CRUD.
 # :rocket: Technologies
 Esse projeto foi feito utilizando as seguintes tecnologias: <br>
 - :heavy_check_mark: **React**
+- :heavy_check_mark: **Redux**
 - :heavy_check_mark: **Node**
 - :heavy_check_mark: **Express**
 - :heavy_check_mark: **TypeScript**
