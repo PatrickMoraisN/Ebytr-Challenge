@@ -10,7 +10,20 @@ export const Section = styled.section`
 export const ReturnButton = styled.button`
   position: absolute;
   padding: 1.5rem 3rem;
-  left: 53rem;
+  left: 43rem;
+  top: 30rem;
+  border-radius: 6px;
+  border: none;
+  background: var(--text-title);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 2rem;
+`;
+
+export const AddButton = styled.button`
+  position: absolute;
+  padding: 1.5rem 3rem;
+  left: 63rem;
   top: 30rem;
   border-radius: 6px;
   border: none;
