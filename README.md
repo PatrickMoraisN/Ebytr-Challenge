@@ -25,19 +25,28 @@ Add and Edit Task
 Filters
 ![Imagem do projeto](./frontend/src/assets/ebytr4.gif)
 
-
+---
+'Login' page
 ![Imagem do projeto](./frontend/src/assets/ebytr.login.png)
 
+Home page
 ![Imagem do projeto](./frontend/src/assets/ebytr.home.png)
 
+Task page
 ![Imagem do projeto](./frontend/src/assets/ebytr.task.png)
 
+AddTask page    
+_Validations are used, not being able to leave an empty field. Warned by React-Toastify_
 ![Imagem do projeto](./frontend/src/assets/ebytr.addTask.png)
 
+EditTask page   
+_Validations are used, not being able to edit a task without changing anything. Warned by React-Toastify_
 ![Imagem do projeto](./frontend/src/assets/ebytr.edit.png)
 
+DeleteTask modal
 ![Imagem do projeto](./frontend/src/assets/ebytr.delete.png)
 
+About page
 ![Imagem do projeto](./frontend/src/assets/ebytr.about.png)
 
 
