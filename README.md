@@ -5,7 +5,7 @@
 - [Media](#camera_flash-media)
 - [About](#monocle_face-about)
 - [Technologies](#rocket-technologies)
-- [Installation Steps](#hammer_and_wrench-installations-steps)
+- [Installation Steps](#hammer_and_wrench-installation-steps)
 - [Author](#closed_book-author)
 <br />
 
