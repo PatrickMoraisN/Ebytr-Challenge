@@ -6,8 +6,6 @@ type RadioBoxProps = {
   setType: (param: string) => void;
 };
 function RadioBox({ type, setType }: RadioBoxProps) {
-  // const [isActive, setIsActive] = React.useState;
-
   return (
     <>
       <S.RadioBox
