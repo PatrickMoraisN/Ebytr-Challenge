@@ -7,6 +7,7 @@ import Task from '../../components/Task';
 import Search from '../../components/Search';
 import { ADD_TASKS_ACTION } from '../../redux/actions';
 import NoTasks from '../../templates/NoTasks';
+import Loading from '../../templates/Loading';
 
 type TaskProps = {
   _id: string;
@@ -18,22 +19,27 @@ type TaskProps = {
 
 function Home() {
   const [tasks, setTasks] = React.useState<TaskProps[] | any>([]);
+  const [isLoading, setIsLoading] = React.useState(false);
   const dispatch = useDispatch();
 
   async function getAllTasks(): Promise<void> {
+    setIsLoading(true);
     const { data } = await api.get('/all');
     dispatch({
       type: ADD_TASKS_ACTION,
       payload: { tasks: data },
     });
     setTasks(data.allTasks.reverse());
+    setIsLoading(false);
   }
 
   React.useEffect(() => {
     getAllTasks();
   }, []);
 
-  if (!tasks || tasks.length === 0) return <NoTasks />;
+  if (isLoading) return <Loading />;
+
+  if (!tasks || (tasks.length === 0 && isLoading === false)) return <NoTasks />;
 
   return (
     <>
