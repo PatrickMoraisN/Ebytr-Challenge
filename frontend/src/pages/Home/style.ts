@@ -6,7 +6,7 @@ export const Section = styled.section`
 
 export const TasksContainer = styled.div`
   left: 28rem;
-  top: 10rem;
+  top: 20rem;
   position: absolute;
 
   a:first-child {
@@ -86,4 +86,11 @@ export const DeleteButton = styled.button`
     margin-left: 8px;
     font-size: 1.6rem;
   }
+`;
+
+export const SearchContainer = styled.div`
+  position: absolute;
+  top: -10rem;
+  height: 5rem;
+  width: 100%;
 `;

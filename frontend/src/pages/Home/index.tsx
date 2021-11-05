@@ -4,6 +4,7 @@ import { api } from '../../services/api';
 import Menu from '../../components/Menu';
 import * as S from './style';
 import Task from '../../components/Task';
+import Search from '../../components/Search';
 
 type TaskProps = {
   _id: string;
@@ -36,6 +37,7 @@ function Home() {
     <>
       <Menu />
       <S.TasksContainer>
+        <Search setTasks={setTasks} />
         {tasks.map((task: TaskProps) => {
           const { _id, title, status, date } = task;
           return <Task id={_id} title={title} status={status} date={date} />;

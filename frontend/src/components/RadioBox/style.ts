@@ -14,6 +14,7 @@ export const RadioBox = styled.button<RadioBoxProps>`
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  cursor: pointer;
   transition: 0.2s;
   &:hover {
     filter: brightness(0.9);
