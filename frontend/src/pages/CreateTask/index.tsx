@@ -25,7 +25,7 @@ function CreateTask() {
     const unformatedDate = moment().format('l');
     const date = formatDatePT_BR(unformatedDate);
     if (!title || !description) {
-      toast.error('Invalid Task!', {
+      toast.error('Invalid Task! Type Something!', {
         position: 'top-right',
         autoClose: 5000,
         hideProgressBar: false,

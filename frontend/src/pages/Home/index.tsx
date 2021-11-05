@@ -6,6 +6,7 @@ import * as S from './style';
 import Task from '../../components/Task';
 import Search from '../../components/Search';
 import { ADD_TASKS_ACTION } from '../../redux/actions';
+import NoTasks from '../../templates/NoTasks';
 
 type TaskProps = {
   _id: string;
@@ -32,7 +33,7 @@ function Home() {
     getAllTasks();
   }, []);
 
-  if (!tasks || tasks.length === 0) return <p>Add tasks!</p>;
+  if (!tasks || tasks.length === 0) return <NoTasks />;
 
   return (
     <>
