@@ -55,7 +55,7 @@ About page
 
 ---
 # :monocle_face: About
-This challenge was made by integrating React with MongoDB using Mongoose.
+This challenge was made by integrating React with Node / Express using MongoDB / Mongoose.
 
 The aim is to make a full-stack application with the basic features of a CRUD.
 <br />
