@@ -19,3 +19,13 @@ export const ReturnButton = styled.button`
   cursor: pointer;
   font-size: 2rem;
 `;
+
+export const ButtonContainer = styled.div`
+  position: absolute;
+  left: 53rem;
+  top: 8rem;
+
+  svg {
+    font-size: 10rem;
+  }
+`;
