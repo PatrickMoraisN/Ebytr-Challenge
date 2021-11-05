@@ -23,16 +23,28 @@ function Search({ setTasks }: SearchProps) {
   const [type, setType] = React.useState('all');
   const [searchInput, setSearchInput] = React.useState('');
 
-  const searchOnlyByTitle = (tasks: TaskProps[]) => {
+  const searchByAllStatus = (tasks: TaskProps[]) => {
     const filteredTasks = [...tasks].filter(({ title }) =>
       title.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase())
     );
     setTasks(filteredTasks);
   };
+  const searchTasks = (task: TaskProps[]) => {
+    const filteredTasks = [...tasks].filter(({ title, status }) => {
+      return (
+        title.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase()) &&
+        status === type
+      );
+    });
+    setTasks(filteredTasks);
+  };
+
   const { tasks } = useSelector((state: RootState) => state.TaskReducer);
   const handleSearch = () => {
     if (type === 'all') {
-      searchOnlyByTitle(tasks);
+      searchByAllStatus(tasks);
+    } else {
+      searchTasks(tasks);
     }
   };
 
