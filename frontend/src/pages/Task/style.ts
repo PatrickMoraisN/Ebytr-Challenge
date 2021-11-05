@@ -20,7 +20,7 @@ export const Section = styled.section`
   }
   .done {
     background: #96ff9f;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.8rem;
     border-radius: 6px;
   }
 
